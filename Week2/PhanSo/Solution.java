@@ -1,14 +1,14 @@
-package Week2;
-
+package Week2.PhanSo;
 /**
- * lop xay dung tu so va mau so.
+ * Lớp đại diện cho một phân số (tử số/mẫu số).
  */
 public class Solution {
-    private int numerator;
-    private int denominator;
+    private int numerator;   // Tử số
+    private int denominator; // Mẫu số
 
     /**
-     * Constructor 1.
+     * Constructor mặc định.
+     * Tạo một đối tượng Solution với giá trị tử số = 1 và mẫu số = 1.
      */
     public Solution() {
         this.numerator = 1;
@@ -16,9 +16,12 @@ public class Solution {
     }
 
     /**
-     * khai bao lop Sol.
-     * @param numerator tu so
-     * @param denominator mau so
+     * Constructor.
+     * Tạo một đối tượng Solution với tử số và mẫu số được cung cấp.
+     * Nếu mẫu số là 0, tử số được giữ nguyên và mẫu số được đặt thành 1.
+     *
+     * @param numerator   tử số
+     * @param denominator mẫu số
      */
     public Solution(int numerator, int denominator) {
         if (denominator == 0) {
@@ -31,45 +34,50 @@ public class Solution {
     }
 
     /**
-     * set the numerator.
-     * @param numerator ts
+     * Setter cho tử số.
+     *
+     * @param numerator tử số mới
      */
     public void setNumerator(int numerator) {
         this.numerator = numerator;
     }
 
     /**
-     * get the numerator.
-     * @return ts
+     * Getter cho tử số.
+     *
+     * @return tử số
      */
     public int getNumerator() {
         return numerator;
     }
 
     /**
-     * set the denominator.
-     * @param denominator ms
+     * Setter cho mẫu số.
+     * Nếu mẫu số là 0, mẫu số được giữ nguyên.
+     *
+     * @param denominator mẫu số mới
      */
     public void setDenominator(int denominator) {
-        if (denominator == 0) {
-            denominator = this.denominator;
+        if (denominator != 0) {
+            this.denominator = denominator;
         }
-        this.denominator = denominator;
     }
 
     /**
-     * get the denominator.
-     * @return ms
+     * Getter cho mẫu số.
+     *
+     * @return mẫu số
      */
     public int getDenominator() {
         return denominator;
     }
 
     /**
-     * ham tim uoc chung lon nhat.
-     * @param a num 1
-     * @param b num 2
-     * @return gcd
+     * Tìm ước chung lớn nhất của hai số.
+     *
+     * @param a số thứ nhất
+     * @param b số thứ hai
+     * @return ước chung lớn nhất
      */
     public static int gcd(int a, int b) {
         a = Math.abs(a);
@@ -81,8 +89,9 @@ public class Solution {
     }
 
     /**
-     * Reduce to the lowest terms.
-     * @return reduced fraction
+     * Rút gọn phân số về dạng tối giản.
+     *
+     * @return phân số rút gọn
      */
     public Solution reduce() {
         int temp = gcd(this.getNumerator(), this.getDenominator());
@@ -92,9 +101,10 @@ public class Solution {
     }
 
     /**
-     * add two fractions.
-     * @param fraction other fraction
-     * @return new fraction
+     * Cộng hai phân số.
+     *
+     * @param fraction phân số cần cộng
+     * @return phân số tổng
      */
     public Solution add(Solution fraction) {
         fraction.reduce();
@@ -105,9 +115,10 @@ public class Solution {
     }
 
     /**
-     * subtract two fractions.
-     * @param fraction other fraction
-     * @return diff of two fration
+     * Trừ hai phân số.
+     *
+     * @param fraction phân số cần trừ
+     * @return phân số hiệu
      */
     public Solution subtract(Solution fraction) {
         fraction.reduce();
@@ -118,9 +129,10 @@ public class Solution {
     }
 
     /**
-     * multiply two fractions.
-     * @param fraction others
-     * @return product
+     * Nhân hai phân số.
+     *
+     * @param fraction phân số cần nhân
+     * @return phân số tích
      */
     public Solution multiply(Solution fraction) {
         fraction.reduce();
@@ -130,9 +142,10 @@ public class Solution {
     }
 
     /**
-     * divide two fractions.
-     * @param fraction others
-     * @return quotient
+     * Chia hai phân số.
+     *
+     * @param fraction phân số cần chia
+     * @return phân số thương
      */
     public Solution divide(Solution fraction) {
         fraction.reduce();
@@ -142,9 +155,10 @@ public class Solution {
     }
 
     /**
-     * so sanh 2 phan so xem chung co bang nhau hay khong.
-     * @param obj to compare
-     * @return true if equal otherwise false
+     * So sánh hai phân số xem chúng có bằng nhau hay không.
+     *
+     * @param obj đối tượng để so sánh
+     * @return true nếu bằng nhau, ngược lại trả về false
      */
     public boolean equals(Object obj) {
         if (obj instanceof Solution) {
