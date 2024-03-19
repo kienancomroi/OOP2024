@@ -1,10 +1,33 @@
-package Week4.Kethua1;
+package Week4.keThua1;
+
+/**
+ * Represents a Circle.
+ */
 public class Circle {
-    protected double radius;
-    protected String color;
+    private double radius;
+    private String color;
     protected static final double PI = Math.PI;
+
     /**
-     * Constructs 1.
+     * Constructs a Circle object with default values.
+     */
+    public Circle() {
+        this.radius = 0.0;
+        this.color = "black";
+    }
+
+    /**
+     * Constructs a Circle object with the given radius.
+     *
+     * @param radius the radius of the circle
+     */
+    public Circle(double radius) {
+        this.radius = radius;
+        this.color = "black";
+    }
+
+    /**
+     * Constructs a Circle object with the given radius and color.
      *
      * @param radius the radius of the circle
      * @param color  the color of the circle
@@ -24,7 +47,7 @@ public class Circle {
     }
 
     /**
-     * Sets the radius.
+     * Sets the radius of the circle.
      *
      * @param radius the new radius of the circle
      */
@@ -42,7 +65,7 @@ public class Circle {
     }
 
     /**
-     * Sets the color.
+     * Sets the color of the circle.
      *
      * @param color the new color of the circle
      */
@@ -56,7 +79,7 @@ public class Circle {
      * @return the area of the circle
      */
     public double getArea() {
-        return Math.PI * radius * radius;
+        return radius * radius * PI;
     }
 
     /**
@@ -65,6 +88,6 @@ public class Circle {
      * @return a string representation of the Circle object
      */
     public String toString() {
-        return "Circle[radius=" + radius + ",color=" + color + "]";
+        return "Circle [radius=" + radius + ", color=" + color + "]";
     }
 }
