@@ -1,8 +1,4 @@
-package Week4.keThua1;
 
-/**
- * Represents a Circle.
- */
 public class Circle {
     private double radius;
     private String color;

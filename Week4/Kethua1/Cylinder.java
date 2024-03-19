@@ -1,66 +1,92 @@
-package Week4.Kethua1;
-
+packe]age
 public class Cylinder extends Circle {
     private double height;
+    protected static final double PI = Math.PI;
 
     /**
-     * Constructs 1.
-     *
-     * @param radius the radius of the cylinder's base circle
-     * @param color  the color of the cylinder
+     * Constructor 1.
+     */
+
+    public Cylinder() {
+        super();
+        this.height = 1.0;
+    }
+
+    /**
+     * Constructor 2.
+     * @param radius the radius of the circle
+     */
+
+    public Cylinder(double radius) {
+        super(radius);
+        this.height = 1.0;
+    }
+    /**
+     * Constructor 3.
+     * @param radius the radius of the circle
      * @param height the height of the cylinder
      */
-    public Cylinder(double radius, String color, double height) {
+
+    public Cylinder(double radius, double height) {
+        super(radius);
+        this.height = height;
+    }
+
+    /**
+     * Constructor 4.
+     * @param radius the radius of the circle
+     * @param color the color of the circle
+     * @param height the height of the cylinder
+     */
+
+    public Cylinder(double radius, double height, String color) {
         super(radius, color);
         this.height = height;
     }
 
     /**
-     * Returns the height of the cylinder.
-     *
+     * Getter for the height.
      * @return the height of the cylinder
      */
+
     public double getHeight() {
         return height;
     }
 
     /**
-     * Sets the height.
-     *
-     * @param height
+     * Setter for the height.
+     * @param height the height of the cylinder
      */
+
     public void setHeight(double height) {
         this.height = height;
     }
 
     /**
-     * Calculates and returns the volume.
-     *
-     * @return the volume
+     * Calculates the volume of the cylinder.
+     * @return the volume of the cylinder
      */
+
     public double getVolume() {
         return getArea() * height;
     }
 
     /**
-     * Calculates and returns.
-     *
-     * @return the surface area of the cylinder
+     * Overrides the toString method.
      */
+
     @Override
-    public double getArea() {
-        double baseArea = super.getArea();
-        double lateralArea = 2 * Math.PI * radius * height;
-        return (2 * baseArea) + lateralArea;
+    public String toString() {
+        return "Cylinder[Circle[radius=" + getRadius() + ",color="
+                + getColor() + "],height=" + getHeight() + "]";
     }
 
     /**
-     * Returns a string representation of the Cylinder object.
-     *
-     * @return a string representation of the Cylinder object
+     * Overrides the getArea method.
      */
+
     @Override
-    public String toString() {
-        return "Cylinder[" + super.toString() + ",height=" + height + "]";
+    public double getArea() {
+        return PI * getRadius() * getRadius();
     }
 }
