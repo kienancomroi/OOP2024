@@ -1,4 +1,3 @@
-package Week4.Kethua2;
 
 public class Student extends Person {
     private String program;
@@ -41,7 +40,7 @@ public class Student extends Person {
      * getter for year.
      * @return year of student
      */
-    public int getYear {
+    public int getYear() {
         return year;
     }
 
@@ -57,15 +56,15 @@ public class Student extends Person {
      * getter for fee.
      * @return fee of student
      */
-    public double getFee {
-        this.fee = fee
+    public double getFee() {
+        return fee;
     }
 
     /**
      * setter of fee.
      * @param fee fee of student
      */
-    public void setFee(doulbe fee) {
+    public void setFee(double fee) {
         this.fee = fee;
     }
 

@@ -1,4 +1,4 @@
-package Week4.Kethua2;
+
 
 public class Staff extends Person {
     private String school;

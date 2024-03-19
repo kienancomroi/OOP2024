@@ -1,4 +1,4 @@
-package Week4.Kethua2;
+
 
 public class Person {
     private String name;
@@ -7,7 +7,7 @@ public class Person {
     /**
      * constructor1.
      */
-    public Person () {
+    public Person() {
         this.name = "";
         this.address = "";
     }
@@ -50,6 +50,6 @@ public class Person {
      * override to String.
      */
     public String toString() {
-        return "Person[name= + name + ",address= + address + "]";
+        return "Person[name=" + name + ",address=" + address + "]";
     }
 }
