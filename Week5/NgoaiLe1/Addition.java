@@ -1,5 +1,4 @@
-package Week5.NgoaiLe1;
-
+package Week5.NgoaiLe1
 public class Addition extends BinaryExpression {
 
     /**

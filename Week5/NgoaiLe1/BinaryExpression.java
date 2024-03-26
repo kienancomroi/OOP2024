@@ -1,7 +1,4 @@
-package Week5.NgoaiLe1;
-
-import Week5.NgoaiLe1.Expression;
-
+package Week5.NgoaiLe1
 public abstract class BinaryExpression extends Expression {
 
     protected Expression left;
@@ -9,14 +6,13 @@ public abstract class BinaryExpression extends Expression {
 
     /**
      * constructor for BinaryExpression.
-     * @param left
-     * @param right
+     * @param left expression
+     * @param right expression
      */
+
     public BinaryExpression(Expression left, Expression right) {
         this.left = left;
         this.right = right;
     }
-    public String toString() {
-        return "(" + left.toString() + " " + right.toString() + ")";
-    }
+
 }
