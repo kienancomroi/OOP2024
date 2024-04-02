@@ -1,7 +1,8 @@
-package Week6.DaHinh1;
+package Week6.DaHinh1
 public class Circle extends Shape {
 
     protected double radius;
+
     /**
      * Constructor 1.
      */
@@ -13,6 +14,7 @@ public class Circle extends Shape {
 
     /**
      * Constructor 2.
+     *
      * @param radius radius of the circle
      */
 
@@ -22,8 +24,9 @@ public class Circle extends Shape {
 
     /**
      * Constructor 3.
+     *
      * @param radius radius of the circle
-     * @param color color of the circle
+     * @param color  color of the circle
      * @param filled filled or not
      */
 
@@ -34,6 +37,7 @@ public class Circle extends Shape {
 
     /**
      * Getter for radius.
+     *
      * @return radius
      */
 
@@ -43,6 +47,7 @@ public class Circle extends Shape {
 
     /**
      * Setter for radius.
+     *
      * @param radius radius of the circle
      */
 
@@ -52,6 +57,7 @@ public class Circle extends Shape {
 
     /**
      * Calculate the area of the circle.
+     *
      * @return area
      */
 
@@ -61,6 +67,7 @@ public class Circle extends Shape {
 
     /**
      * Calculate the perimeter of the circle.
+     *
      * @return perimeter
      */
 
@@ -76,3 +83,4 @@ public class Circle extends Shape {
     public String toString() {
         return String.format("Circle[radius=%.1f,color=%s,filled=%b]", radius, color, filled);
     }
+}

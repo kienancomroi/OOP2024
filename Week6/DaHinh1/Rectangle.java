@@ -1,5 +1,4 @@
-package Week6.DaHinh1;
-
+package Week6.DaHinh1
 public class Rectangle extends Shape {
 
     protected double width;
@@ -17,7 +16,8 @@ public class Rectangle extends Shape {
 
     /**
      * Constructor 2.
-     * @param width width of the rectangle
+     *
+     * @param width  width of the rectangle
      * @param length length of the rectangle
      */
 
@@ -28,9 +28,10 @@ public class Rectangle extends Shape {
 
     /**
      * Constructor 3.
-     * @param width width of the rectangle
+     *
+     * @param width  width of the rectangle
      * @param length length of the rectangle
-     * @param color color of the rectangle
+     * @param color  color of the rectangle
      * @param filled whether the rectangle is filled or not
      */
 
@@ -40,23 +41,10 @@ public class Rectangle extends Shape {
         this.length = length;
     }
 
-    /**
-     * Constructor 4.
-     * @param topLeft top left point of the rectangle
-     * @param width width of the rectangle
-     * @param length length of the rectangle
-     * @param color color of the rectangle
-     * @param filled whether the rectangle is filled or not
-     */
-
-    public Rectangle(double width, double length, String color, boolean filled) {
-        super(color, filled);
-        this.width = width
-        this.length = length;
-    }
 
     /**
      * Getter for width.
+     *
      * @return width of the rectangle
      */
 
@@ -66,6 +54,7 @@ public class Rectangle extends Shape {
 
     /**
      * Setter for width.
+     *
      * @param width width of the rectangle
      */
 
@@ -75,6 +64,7 @@ public class Rectangle extends Shape {
 
     /**
      * Getter for length.
+     *
      * @return length of the rectangle
      */
 
@@ -84,6 +74,7 @@ public class Rectangle extends Shape {
 
     /**
      * Setter for length.
+     *
      * @param length length of the rectangle
      */
 
@@ -93,6 +84,7 @@ public class Rectangle extends Shape {
 
     /**
      * Calculates the area of the rectangle.
+     *
      * @return area of the rectangle
      */
 
@@ -102,6 +94,7 @@ public class Rectangle extends Shape {
 
     /**
      * Calculates the perimeter of the rectangle.
+     *
      * @return perimeter of the rectangle
      */
 
@@ -118,3 +111,4 @@ public class Rectangle extends Shape {
         return String.format("Rectangle[width=%.1f,length=%.1f,color=%s,filled=%b]",
                 width, length, color, filled);
     }
+}

@@ -1,5 +1,4 @@
-package Week6.DaHinh1;
-
+package Week6.DaHinh1
 public abstract class Shape {
     protected String color;
     protected boolean filled;
