@@ -1,4 +1,4 @@
-package Week6.DaHinh1
+package Week6.DaHinh1;
 public class Rectangle extends Shape {
 
     protected double width;

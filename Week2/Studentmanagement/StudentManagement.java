@@ -1,4 +1,4 @@
-package Week2.Studentmanagement;
+
 public class StudentManagement {
     private Student[] students = new Student[100]; // Mảng chứa các đối tượng sinh viên (tối đa 100)
     private int totalStudent = 0;
@@ -83,6 +83,10 @@ public class StudentManagement {
         totalStudent--;
     }
 
+    /**
+     * ham main chay chuong trinh.
+     * @param args quan ly may thang em
+     */
     public static void main(String[] args) {
         StudentManagement studentManagement = new StudentManagement();
         Student s1 = new Student("Nguyen Van An", "17020001", "K62CC", "17020001@vnu.edu.vn");
